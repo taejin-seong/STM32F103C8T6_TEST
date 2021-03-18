@@ -13,10 +13,11 @@
 
 
 
+
 // TEST용 함수
 void apInit(void)
 {
- //  uartOpen(_DEF_UART1, 115200); //UART
+   uartOpen(_DEF_UART1, 115200); //UART 개통
 
 
    // nRF24L01 송신 코드
@@ -65,20 +66,81 @@ void apMain(void)
 //	int16_t AccData, MagData, GyroData ;
 
     // MPU9250 축 테스트 변수
+   int16_t Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z;
 
-//	int16_t Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z;
+   //상보 필터 테스트 변수
 
-	// 상보 필터 테스트 변수
-	/*
-	float After1_Ac_X, After1_Ac_Y, After1_Ac_Z, After_Gy_X, After_Gy_Y, After_Gy_Z, After1_Ma_X, After1_Ma_Y,  After1_Ma_Z ;
-	float After2_Ac_X, After2_Ac_Y, After2_Ac_Z, After2_Ma_X, After2_Ma_Y, After2_Ma_Z ; ;
-	float Deg_X, Deg_Y, Deg_Z ;
-	float Roll, Pitch, Yaw, Yaw_G, Yaw_M ;
-	float R_Ma_X, R_Ma_Y;
-	float beta;
-*/
+
+   int16_t Base_Ax, Base_Ay,Base_Az, Base_Gx, Base_Gy, Base_Gz;
+   int16_t Las_Angle_Gx , Las_Angle_Gy, Las_Angle_Gz;
+   int16_t Angle_Ax, Angle_Ay, Angle_Gx, Angle_Gy, Angle_Gz; //Angle_Az,
+   int16_t Reward_Mx, Reward_My;
+   int16_t Roll , Pitch , Yaw ;
+   int16_t Yaw_G, Yaw_M;
+
+   float dt,pre_msec;
+
+   calibrate(&Base_Ax, &Base_Ay, &Base_Az, &Base_Gx, &Base_Gy, &Base_Gz);
+
 	while(1)
 	{
+
+
+		  //단위시간 변화량
+		  dt = (millis()-pre_msec)/1000.0;
+		  pre_msec = millis();
+
+		  //상보 필터 테스트 TODO: 미완성
+		  MPU6050_GetData_Axis(&Ac_X, &Ac_Y, &Ac_Z, &Gy_X, &Gy_Y, &Gy_Z, &Ma_X, &Ma_Y, &Ma_Z);
+
+		  Las_Angle_Gx = Roll;	//최근값 누적
+		  Las_Angle_Gy = Pitch;
+		  Las_Angle_Gz = Yaw;
+
+
+		  Gy_X = (Gy_X - Base_Gx)/ 131;
+		  Gy_Y = (Gy_Y - Base_Gy)/ 131;
+		  Gy_Z = (Gy_Z - Base_Gz)/ 131;
+
+
+		  Angle_Ax = atan(-1.000 * Ac_Y / sqrt( pow(Ac_X,2) + pow(Ac_Z,2) ) ) * RAD2DEG;
+		  Angle_Ay = atan(Ac_X / sqrt( pow(Ac_Y,2) + pow(Ac_Z,2) ) ) * RAD2DEG;
+
+		  Angle_Gx = Gy_X * dt + Las_Angle_Gx;
+		  Angle_Gy = Gy_Y * dt + Las_Angle_Gy;
+		  Angle_Gz = Gy_Z * dt + Las_Angle_Gz;
+
+		  dt = 0.000;
+
+		  Roll  = Alpha * Angle_Gx + (1.000 - Alpha) * Angle_Ax;
+		  Pitch = Alpha * Angle_Gy + (1.000 - Alpha) * Angle_Ay;
+
+
+		  Ma_X  =  (Ma_X - 15) * 0.9;
+		  Ma_Y  =  Ma_Y + 65;
+		  Ma_Z  =  (Ma_Z + 125) * 0.53;
+
+		  Reward_Mx =  (cos(70.000*DEG2RAD)*Ma_X + sin(70.000*DEG2RAD)*Ma_Z) - 141;
+		  Reward_My =  (cos(-70.000*DEG2RAD)*Ma_Y - sin(-70.000*DEG2RAD)*Ma_Z) - 143;
+
+		  Yaw_G =  Angle_Gz;
+		  Yaw_M =  -atan2(Reward_Mx, Reward_My) * RAD2DEG;
+		 //Yaw_M =  -atan2(Ma_X, Ma_Y) * RAD2DEG;
+
+		  if( (Roll<10) && (Roll>-10) && (Pitch<10) && (Pitch>-10) )
+		  {
+			  Yaw = Beta * Yaw_G + (1.000 - Beta) * Yaw_M;
+		  }
+		  else
+		  {
+			  Yaw = Yaw_G;
+		  }
+
+		  uartPrintf(_DEF_UART1, "Roll:%d, Pitch %d, Yaw:%d , Yaw_G:%d, Yaw_M:%d \r\n", Roll, Pitch, Yaw, Yaw_G, Yaw_M);
+		  delay(10);
+
+
+
 
 		//MPU-9250 각도 값 테스트
 		/*
@@ -94,74 +156,10 @@ void apMain(void)
 		//MPU-9250  센서 축 테스트
 		/*
 		MPU6050_GetData_Axis(&Ac_X, &Ac_Y, &Ac_Z, &Gy_X, &Gy_Y, &Gy_Z, &Ma_X, &Ma_Y, &Ma_Z);
-		uartPrintf(_DEF_UART1, "MPU9250: (Ac_X: %d, Ac_Y: %d, Ac_Z: %d, Gy_X: %d, Gy_Y: %d, Gy_Z: %d, Ma_X: %d, &Ma_Y: %d, Ma_Z: %d \r\n",
+		uartPrintf(_DEF_UART1, "MPU9250: Ac_X: %d, Ac_Y: %d, Ac_Z: %d, Gy_X: %d, Gy_Y: %d, Gy_Z: %d, Ma_X: %d, &Ma_Y: %d, Ma_Z: %d \r\n",
 				   	   	   	   	   	   	  Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z);
 	    HAL_Delay(10);
-		*/
-
-
-
-		//상보 필터 테스트
-
-	//   static uint16_t cnt=1;
-//	   MPU6050_GetData_Axis(&Ac_X, &Ac_Y, &Ac_Z, &Gy_X, &Gy_Y, &Gy_Z, &Ma_X, &Ma_Y, &Ma_Z);
-
-					/* TODO: 센서 스케일 값 조정 */
-	   /*	   After1_Ac_X = Ac_X / 16384.0;
-	   After1_Ac_Y = Ac_Y / 16384.0;
-	   After1_Ac_Z = Ac_Z / 16384.0;
-
-	   After_Gy_X  = Gy_X / 131;
-	   After_Gy_Y  = Gy_Y / 131;
-	   After_Gy_Z  = Gy_Z / 131;
-
-	   After1_Ma_X  = Ma_X ;
-	   After1_Ma_Y  = Ma_X ;
-	   After1_Ma_Z  = Ma_Y ;
-
-	   After2_Ac_X = After2_Ac_X  * ((float)cnt-1) / (float)cnt + After1_Ac_X  / (float)cnt;
-	   After2_Ac_Y = After2_Ac_Y  * ((float)cnt-1) / (float)cnt + After1_Ac_Y  / (float)cnt;
-	   After2_Ac_Z = After2_Ac_Z  * ((float)cnt-1) / (float)cnt + After1_Ac_Z  / (float)cnt;
-
-
-	   Deg_X = atan(After1_Ac_Y / sqrt(pow(After1_Ac_X, 2) + pow(After1_Ac_Z, 2))) * 180.0 / M_PI;
-	   Deg_Y = atan(After1_Ac_X / sqrt(pow(After1_Ac_Y, 2) + pow(After1_Ac_Z, 2))) * 180.0 / M_PI;
-	   Deg_Z = atan(sqrt(pow(After1_Ac_X, 2) + pow(After1_Ac_Y, 2)) / After1_Ac_Z) * 180.0 / M_PI;
-
-	  // Complementary filter
-	  Roll  = 0.98 * (Roll +  After_Gy_X * 0.005) + 0.02 * Deg_X;
-	  Pitch = 0.98 * (Pitch + After_Gy_Y * 0.005) + 0.02 * Deg_Y;
-
-
-
-	  After2_Ma_X   = (After1_Ma_X -15) * 0.9;
-	  After2_Ma_Y   = After1_Ma_Y +65;
-	  After2_Ma_Z   = (After1_Ma_Z +125) * 0.53;
-
-	  R_Ma_X = (cos(70.000* 0.01745)  *  After2_Ma_X + sin(70.000* 0.01745) *  After2_Ma_Z) - 141;
-	  R_Ma_Y = (cos(-70.000* 0.01745) *  After2_Ma_Y - sin(-70.000*0.01745) *  After2_Ma_Z) - 143;
-
-
-
-	  Yaw_G = Deg_Z;
-	  Yaw_M = -atan2(R_Ma_X, R_Ma_Y) * 57.29578;		//+- 10도 안에서만 사용가능
-
-	  beta = 0.92;
-
-	  if( (Roll<10) && (Roll>-10) && (Pitch<10) && (Pitch>-10) )
-	  	Yaw = beta*Yaw_G + (1.000 - beta)*Yaw_M;
-
-	  else
-	  	Yaw = Yaw_G;
-
-
-
-	   if(++cnt>20) cnt=20;
-
-	   uartPrintf(_DEF_UART1,"%3.2f, %3.2f, %3.2f\r\n", Roll, Pitch, Yaw);
-
-
-*/
+		 */
 
 
 
@@ -240,10 +238,10 @@ void apMain(void)
 		 *
 		 * 3). 실제로 사용할려면 while문에 스위치문 쓰기에는 무리가 있음 구조체나 다른 방안 검토
 		 */
-		/*
-			uint8_t rx_data = uartRead(_DEF_UART1);
 
-			switch (rx_data)
+			//uint8_t rx_data = uartRead(_DEF_UART1);
+
+		/*	switch (rx_data)
 			{
 				case 'f':
 					Go_Straight();
@@ -255,10 +253,9 @@ void apMain(void)
 				default:
 					break;
 			}
-		*/
 
-		LedToggle(_DEF_LED1);
-		delay(100);
+			*/
+
 	}
 }
 

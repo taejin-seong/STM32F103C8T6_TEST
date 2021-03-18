@@ -5,7 +5,6 @@
   * @version V1.0
   * @date    15-March-2021
   * @brief   Using STM32F103C8T6 & mpu9250 module
-
   ******************************************************************************
   * @attention
   *
@@ -202,12 +201,7 @@ static int whoAmIAK8963(){
 /* starts communication with the MPU-9250 */
 uint8_t MPU9250_Init()
 {
-	#ifndef USE_SPI
-	while(MPU9250_IsConnected() == false)
-	{
-		HAL_Delay(100);
-	}
-	#endif
+
 	// select clock source to gyro
 	writeRegister(PWR_MGMNT_1, CLOCK_SEL_PLL);
 	// enable I2C master mode
@@ -433,3 +427,43 @@ void MPU6050_GetData_Axis(int16_t* Ac_X, int16_t* Ac_Y, int16_t* Ac_Z, int16_t* 
 
 }
 
+
+ void calibrate(int16_t* Base_Ax , int16_t* Base_Ay, int16_t* Base_Az, int16_t*Base_Gx, int16_t* Base_Gy, int16_t* Base_Gz)	//초기값 읽기
+{
+	int8_t   cal = 10;
+	int16_t  Ac_X,    Ac_Y,   Ac_Z, Gy_X, Gy_Y, Gy_Z ;
+	int16_t	 TempAx , TempAy, TempAz, TempGx, TempGy, TempGz, TempMx, TempMy, TempMz;
+
+	for(int i=0; i<cal; i++)	//평균
+	{
+		 MPU6050_GetData_Axis(&TempAx, &TempAy, &TempAz, &TempGx, &TempGy, &TempGz, &TempMx, &TempMy, &TempMz);
+
+		 Ac_X  +=  -TempAx - 16383;
+		 Ac_Y  +=  -TempAy;
+		 Ac_Z  +=   TempAz;
+
+		 Gy_X  +=   TempGx;
+		 Gy_Y  +=   TempGy;
+		 Gy_Z  +=   TempGz;
+
+		 delay(100);
+	}
+
+	Ac_X /= cal;
+	Ac_Y /= cal;
+	Ac_Z /= cal;
+
+	Gy_X /= cal;
+	Gy_Y /= cal;
+	Gy_Z /= cal;
+
+	*Base_Ax = Ac_X;	//초기 값으로 저장
+	*Base_Ay = Ac_Y;
+	*Base_Az = Ac_Z;
+
+	*Base_Gx = Gy_X;
+	*Base_Gy = Gy_Y;
+	*Base_Gz = Gy_Z;
+
+
+}

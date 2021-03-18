@@ -6,16 +6,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="RAD2DEG"/>
+		<item key="selection" value="_mag_adjust"/>
 		<list key="findhistory">
+			<item value="_mag_adjust"/>
+			<item value="TODO"/>
+			<item value="adjust"/>
 			<item value="RAD2DEG57.29578"/>
 			<item value="AC"/>
 			<item value="16384"/>
 			<item value="ASA"/>
 			<item value="A"/>
-			<item value="AK8963_ASA"/>
-			<item value="4B"/>
-			<item value="_buffer"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -5,7 +5,6 @@
   * @version V1.0
   * @date    15-March-2021
   * @brief   Using STM32F103C8T6 & mpu9250 module
-
   ******************************************************************************
   * @attention
   *
@@ -94,7 +93,7 @@ void MPU9250_SetAccelRange(AccelRange range);
 /*21-03-16 STJ 수정 */
 void MPU6050_GetData_Axis(int16_t* Ac_X, int16_t* Ac_Y, int16_t* Ac_Z, int16_t* Gy_X, int16_t* Gy_Y, int16_t* Gy_Z, int16_t* Ma_X,int16_t* Ma_Y, int16_t* Ma_Z);
 
+void calibrate(int16_t* Base_Ax , int16_t* Base_Ay, int16_t* Base_Az, int16_t*Base_Gx, int16_t* Base_Gy, int16_t* Base_Gz);
 
 
 #endif /* _USE_HW_MPU9250 */
-
