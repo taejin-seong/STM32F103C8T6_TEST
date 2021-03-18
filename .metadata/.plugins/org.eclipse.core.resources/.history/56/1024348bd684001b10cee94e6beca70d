@@ -1,0 +1,45 @@
+/*
+ * ap.c
+ *
+ *  Created on: Mar 14, 2021
+ *      Author: sungt
+ */
+
+#ifndef SRC_AP_AP_C_
+#define SRC_AP_AP_C_
+
+
+#include "ap.h"
+
+
+void apInit(void)
+{
+   uartOpen(_DEF_UART1, 115200); //
+}
+
+void apMain(void)
+{
+
+	while(1)
+	{
+
+		    uartPrintf(_DEF_UART1, "%c","1")
+
+			if (uartAvailable(_DEF_UART1) == 0)
+			{
+				uint8_t rx_data = uartRead(_DEF_UART1);
+				uartPrintf(_DEF_UART1, "rx_data : %c %x\n", rx_data, rx_data);
+
+			}
+
+
+
+
+
+	}
+}
+
+
+
+
+#endif /* SRC_AP_AP_C_ */

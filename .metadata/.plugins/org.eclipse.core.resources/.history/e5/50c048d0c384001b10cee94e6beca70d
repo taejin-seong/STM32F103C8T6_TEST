@@ -1,0 +1,13 @@
+/*
+ * uart.h
+ *
+ *  Created on: Mar 14, 2021
+ *      Author: sungt
+ */
+
+#ifndef SRC_COMMON_HW_INCLUDE_UART_H_
+#define SRC_COMMON_HW_INCLUDE_UART_H_
+
+
+
+#endif /* SRC_COMMON_HW_INCLUDE_UART_H_ */

@@ -1,0 +1,20 @@
+18:32:59 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16820	     60	   1980	  18860	   49ac	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+Finished building: stm32_f103.list
+ 

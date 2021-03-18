@@ -1,0 +1,13 @@
+/*
+ * motor.h
+ *
+ *  Created on: Mar 15, 2021
+ *      Author: sungt
+ */
+
+#ifndef SRC_COMMON_HW_INCLUDE_MOTOR_H_
+#define SRC_COMMON_HW_INCLUDE_MOTOR_H_
+
+
+
+#endif /* SRC_COMMON_HW_INCLUDE_MOTOR_H_ */

@@ -1,0 +1,31 @@
+/*
+ * hw.h
+ *
+ *  Created on: Mar 14, 2021
+ *      Author: sungt
+ */
+
+#ifndef SRC_HW_HW_H_
+#define SRC_HW_HW_H_
+
+
+
+
+#include "hw_def.h"
+
+
+//TODO: HW 설정 (1)
+#include "led.h"
+#include "motor.h"
+#include "tim.h"
+#include "uart.h"
+
+
+void hwInit(void);
+
+
+
+
+
+
+#endif /* SRC_HW_HW_H_ */
