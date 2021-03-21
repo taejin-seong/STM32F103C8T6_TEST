@@ -66,32 +66,41 @@ void apMain(void)
 //	int16_t AccData, MagData, GyroData ;
 
     // MPU9250 축 테스트 변수
-   int16_t Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z;
+//   int16_t Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z;
 
    //상보 필터 테스트 변수
-
-
+/*
    int16_t Base_Ax, Base_Ay,Base_Az, Base_Gx, Base_Gy, Base_Gz;
    int16_t Las_Angle_Gx , Las_Angle_Gy, Las_Angle_Gz;
    int16_t Angle_Ax, Angle_Ay, Angle_Gx, Angle_Gy, Angle_Gz; //Angle_Az,
-   //int16_t Reward_Mx, Reward_My; /* 변환행렬 지자계 각도 보정 변수 */
+   //int16_t Reward_Mx, Reward_My; // 변환행렬 지자계 각도 보정 변수 *
    int16_t Roll , Pitch , Yaw ;
    int16_t Yaw_G, Yaw_M;
 
    float dt,pre_msec;
 
    calibrate(&Base_Ax, &Base_Ay, &Base_Az, &Base_Gx, &Base_Gy, &Base_Gz);
+*/
+
+
+	//엔코더 모터 테스트 변수
+ //   uint8_t rx_data;
+	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+
+    uint16_t cnt1, cnt2, diff, dir;
+    uint16_t speed = 0 , speed2 = 0 ; //rpm (모터축), rpm(기어박스축)
+ 	uint32_t tick;
 
 	while(1)
 	{
 
-		// MPU9250: 변환행렬로 지자계 각도 보정 할 시...
+		//TODO: MPU9250: 변환행렬로 지자계 각도 보정 할 시...
 /*
 		  //단위시간 변화량
 		  dt = (millis()-pre_msec)/1000.0;
 		  pre_msec = millis();
 
-		  //상보 필터 테스트 TODO: 미완성
+
 		  MPU6050_GetData_Axis(&Ac_X, &Ac_Y, &Ac_Z, &Gy_X, &Gy_Y, &Gy_Z, &Ma_X, &Ma_Y, &Ma_Z);
 
 		  Las_Angle_Gx = Roll;	//최근값 누적
@@ -142,13 +151,13 @@ void apMain(void)
 */
 
 
-		// MPU9250: 변환행렬로 지자계 각도 비보정
+		//TODO: MPU9250: 변환행렬로 지자계 각도 비보정
 
-		  //단위시간 변화량
+/*		  //단위시간 변화량
 		  dt = (millis()-pre_msec)/1000.0;
 		  pre_msec = millis();
 
-		  //상보 필터 테스트 TODO: 미완성
+
 		  MPU6050_GetData_Axis(&Ac_X, &Ac_Y, &Ac_Z, &Gy_X, &Gy_Y, &Gy_Z, &Ma_X, &Ma_Y, &Ma_Z);
 
 		  Las_Angle_Gx = Roll;	//최근값 누적
@@ -182,7 +191,7 @@ void apMain(void)
 
 		  uartPrintf(_DEF_UART1, "Roll:%d, Pitch %d, Yaw:%d , Yaw_G:%d, Yaw_M:%d \r\n", Roll, Pitch, Yaw, Yaw_G, Yaw_M);
 		  delay(5);
-
+*/
 
 
 
@@ -302,6 +311,102 @@ void apMain(void)
 			}
 
 			*/
+
+
+
+
+		//TODO: 엔코더 모터 count 테스트
+/*
+		  rx_data = uartRead(_DEF_UART1);
+  	      switch (rx_data)
+		  {
+			 case 'a':
+				 Go_Straight();
+			//	 uartPrintf(_DEF_UART1, "UART1: %c, COUNT:%d\n\r", rx_data, htim2.Instance->CNT);
+				 break;
+
+			 case 's':
+				 Back();
+			//	 uartPrintf(_DEF_UART1, "UART1: %c, COUNT:%d\n\r", rx_data, htim2.Instance->CNT);
+				 break;
+
+			 case 'd':
+				 Stop();
+			//	 uartPrintf(_DEF_UART1, "UART1: %c\n\r,", rx_data);
+				 break;
+
+			 default:
+				 Stop();
+				 break;
+
+		  }
+
+*/
+
+		Go_Straight();
+
+		//TODO 엔코더 모터 RPM 테스트
+		    if(millis() - tick > 1000L)
+		    {
+		      /* 1초마다 TIM3 카운터 증가 확인 */
+		      cnt2 = TIM2->CNT;
+
+		      /* 회전 방향 확인 */
+		      if(__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim2))
+		      {
+		        dir = 1;
+
+		        /* __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리 */
+		        if((cnt2 > cnt1) && (cnt2 - cnt1 < 100)) dir = 0;
+		      }
+		      else
+		      {
+		        dir = 0;
+
+		        /* __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리 */
+		        if((cnt1 > cnt2) && (cnt1 - cnt2 < 100)) dir = 1;
+		      }
+
+		      if(dir)
+		      {
+		        /* Down Counting 방향으로 회전할 때 */
+		        if(cnt1 >= cnt2) diff = cnt1 - cnt2;
+		        else diff = (TIM2->ARR + cnt1) - cnt2 ;
+		      }
+		      else
+		      {
+		        /* Up Counting 방향으로 회전할 때 */
+		        if(cnt2 >= cnt1) diff = cnt2 - cnt1;
+		        else diff = (TIM2->ARR + cnt2) - cnt1 ;
+		      }
+
+		      if((TIM2->SMCR & 0x03) == 0x03)
+		      {
+		        /* X4 Mode 일때는 카운터가 4 증가할 때, 1개의 Pulse */
+		        speed = diff * 60 / 4 / ONE_ROTATION_PULSES; //RPM 계산을 위해서는 x 60
+		        										     //RPM of the motor shaft
+		        speed2 = speed/20; // RPM of the gearbox's output shaf
+
+
+		      }
+		      else
+		      {
+		        /* X4 Mode 일때는 카운터가 2 증가할 때, 1개의 Pulse */
+		        speed = diff * 60 / 2 / ONE_ROTATION_PULSES; //RPM 계산을 위해서는 x 60
+		        											 //RPM of the motor shaft
+		        speed2 = speed/20; // RPM of the gearbox's output shaf
+
+
+		      }
+
+		      tick = millis();
+		      cnt1 = TIM2->CNT;
+		    }
+
+		    uartPrintf(_DEF_UART1, "dir :%d. diff:%d, speed:%d, speed2:%d \r\n",dir,diff,speed,speed2);
+
+
+
 
 	}
 }

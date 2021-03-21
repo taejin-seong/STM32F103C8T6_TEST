@@ -15,6 +15,8 @@ void hwInit(void)
 
 	//TODO: HW 설정 (3)
 	uartInit();
+
+	MX_TIM2_Init();
 	MX_TIM3_Init();
 	MX_I2C2_Init();
 	MX_SPI1_Init();
