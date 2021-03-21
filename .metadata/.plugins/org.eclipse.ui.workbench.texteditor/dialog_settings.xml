@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="_mag_adjust"/>
+		<item key="selection" value="DLPF_"/>
 		<list key="findhistory">
+			<item value="Angle_Gz"/>
 			<item value="_mag_adjust"/>
 			<item value="TODO"/>
 			<item value="adjust"/>
@@ -15,7 +16,6 @@
 			<item value="AC"/>
 			<item value="16384"/>
 			<item value="ASA"/>
-			<item value="A"/>
 		</list>
 		<list key="replacehistory">
 		</list>

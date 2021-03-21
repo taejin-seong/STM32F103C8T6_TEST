@@ -74,7 +74,7 @@ void apMain(void)
    int16_t Base_Ax, Base_Ay,Base_Az, Base_Gx, Base_Gy, Base_Gz;
    int16_t Las_Angle_Gx , Las_Angle_Gy, Las_Angle_Gz;
    int16_t Angle_Ax, Angle_Ay, Angle_Gx, Angle_Gy, Angle_Gz; //Angle_Az,
-   int16_t Reward_Mx, Reward_My;
+   //int16_t Reward_Mx, Reward_My; /* 변환행렬 지자계 각도 보정 변수 */
    int16_t Roll , Pitch , Yaw ;
    int16_t Yaw_G, Yaw_M;
 
@@ -85,7 +85,8 @@ void apMain(void)
 	while(1)
 	{
 
-
+		// MPU9250: 변환행렬로 지자계 각도 보정 할 시...
+/*
 		  //단위시간 변화량
 		  dt = (millis()-pre_msec)/1000.0;
 		  pre_msec = millis();
@@ -121,11 +122,11 @@ void apMain(void)
 		  Ma_Z  =  (Ma_Z + 125) * 0.53;
 
 		  Reward_Mx =  (cos(70.000*DEG2RAD)*Ma_X + sin(70.000*DEG2RAD)*Ma_Z) - 141;
-		  Reward_My =  (cos(-70.000*DEG2RAD)*Ma_Y - sin(-70.000*DEG2RAD)*Ma_Z) - 143;
+		  Reward_My =  (cos(-70.000*DEG2RAD)*Ma_Y - sin(-70.000*DEG2RAD)*Ma_Z)- 143;
 
 		  Yaw_G =  Angle_Gz;
 		  Yaw_M =  -atan2(Reward_Mx, Reward_My) * RAD2DEG;
-		 //Yaw_M =  -atan2(Ma_X, Ma_Y) * RAD2DEG;
+
 
 		  if( (Roll<10) && (Roll>-10) && (Pitch<10) && (Pitch>-10) )
 		  {
@@ -138,6 +139,50 @@ void apMain(void)
 
 		  uartPrintf(_DEF_UART1, "Roll:%d, Pitch %d, Yaw:%d , Yaw_G:%d, Yaw_M:%d \r\n", Roll, Pitch, Yaw, Yaw_G, Yaw_M);
 		  delay(10);
+*/
+
+
+		// MPU9250: 변환행렬로 지자계 각도 비보정
+
+		  //단위시간 변화량
+		  dt = (millis()-pre_msec)/1000.0;
+		  pre_msec = millis();
+
+		  //상보 필터 테스트 TODO: 미완성
+		  MPU6050_GetData_Axis(&Ac_X, &Ac_Y, &Ac_Z, &Gy_X, &Gy_Y, &Gy_Z, &Ma_X, &Ma_Y, &Ma_Z);
+
+		  Las_Angle_Gx = Roll;	//최근값 누적
+		  Las_Angle_Gy = Pitch;
+		  Las_Angle_Gz = Yaw;
+
+
+		  Gy_X = (Gy_X - Base_Gx)/ 131;
+		  Gy_Y = (Gy_Y - Base_Gy)/ 131;
+		  Gy_Z = (Gy_Z - Base_Gz)/ 131;
+
+
+		  Angle_Ax = atan(-1.000 * Ac_Y / sqrt( pow(Ac_X,2) + pow(Ac_Z,2) ) ) * RAD2DEG;
+		  Angle_Ay = atan(Ac_X / sqrt( pow(Ac_Y,2) + pow(Ac_Z,2) ) ) * RAD2DEG;
+
+		  Angle_Gx = Gy_X * dt + Las_Angle_Gx;
+		  Angle_Gy = Gy_Y * dt + Las_Angle_Gy;
+		  Angle_Gz = Gy_Z * dt + Las_Angle_Gz;
+
+		  dt = 0.000;
+
+		  Roll  = Alpha * Angle_Gx + (1.000 - Alpha) * Angle_Ax;
+		  Pitch = Alpha * Angle_Gy + (1.000 - Alpha) * Angle_Ay;
+
+          Yaw_G =  Angle_Gz;
+          Yaw_M =  -atan2(Ma_X, Ma_Y) * RAD2DEG;
+
+
+
+	      Yaw = Beta * Yaw_G + (1.000 - Beta) * Yaw_M;
+
+		  uartPrintf(_DEF_UART1, "Roll:%d, Pitch %d, Yaw:%d , Yaw_G:%d, Yaw_M:%d \r\n", Roll, Pitch, Yaw, Yaw_G, Yaw_M);
+		  delay(5);
+
 
 
 
@@ -154,12 +199,14 @@ void apMain(void)
 
 
 		//MPU-9250  센서 축 테스트
-		/*
-		MPU6050_GetData_Axis(&Ac_X, &Ac_Y, &Ac_Z, &Gy_X, &Gy_Y, &Gy_Z, &Ma_X, &Ma_Y, &Ma_Z);
-		uartPrintf(_DEF_UART1, "MPU9250: Ac_X: %d, Ac_Y: %d, Ac_Z: %d, Gy_X: %d, Gy_Y: %d, Gy_Z: %d, Ma_X: %d, &Ma_Y: %d, Ma_Z: %d \r\n",
-				   	   	   	   	   	   	  Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z);
-	    HAL_Delay(10);
-		 */
+
+	//	MPU6050_GetData_Axis(&Ac_X, &Ac_Y, &Ac_Z, &Gy_X, &Gy_Y, &Gy_Z, &Ma_X, &Ma_Y, &Ma_Z);
+	//	uartPrintf(_DEF_UART1, "MPU9250: Ac_X: %d, Ac_Y: %d, Ac_Z: %d, Gy_X: %d, Gy_Y: %d, Gy_Z: %d, Ma_X: %d, &Ma_Y: %d, Ma_Z: %d \r\n",
+	//			   	   	   	   	   	   	  Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z);
+
+	//	uartPrintf(_DEF_UART1, "Ma_X: %d, Ma_Y: %d, Ma_Z: %d \r\n", Ma_X, Ma_Y, Ma_Z);
+	//    HAL_Delay(10);
+
 
 
 
