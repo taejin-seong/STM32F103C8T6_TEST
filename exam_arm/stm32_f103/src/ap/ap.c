@@ -84,12 +84,26 @@ void apMain(void)
 
 
 	//엔코더 모터 테스트 변수
- //   uint8_t rx_data;
-	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
 
-    uint16_t cnt1, cnt2, diff, dir;
-    uint16_t speed = 0 , speed2 = 0 ; //rpm (모터축), rpm(기어박스축)
+	//   uint8_t rx_data;
+	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
+
+
+/*
+  	uint16_t TIM2_CNT1, TIM2_CNT2, TIM2_DIFF, TIM2_DIR,
+	         TIM4_CNT1, TIM4_CNT2, TIM4_DIFF, TIM4_DIR,
+			 TIM2_RPM_HALL = 0, TIM2_RPM_SHAFT = 0,
+			 TIM4_RPM_HALL = 0, TIM4_RPM_SHAFT = 0 ;
+
  	uint32_t tick;
+
+*/
+
+	//엔코더 이동거리 테스트 변수
+
+	uint32_t TIM4_CNT, TIM2_CNT, Distance , TL, TR, TC_1, TC_2;
+
 
 	while(1)
 	{
@@ -343,67 +357,278 @@ void apMain(void)
 
 */
 
+
+
+			//TODO 엔코더 모터 RPM 테스트 , TIM2에 달려있는 엔코더 모터만...
+/*
+			Go_Straight();
+			//Back();
+
+
+			if(millis() - tick > 1000L)
+			{
+				// 1초마다 TIM2 카운터 증가 확인
+				TIM2_CNT2 = TIM2->CNT;
+
+				// 회전 방향 확인
+				if(__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim2))
+				{
+					TIM2_DIR = 1;
+
+					// __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리
+					if((TIM2_CNT2 > TIM2_CNT1) && (TIM2_CNT2 - TIM2_CNT1 < 100)) TIM2_DIR = 0;
+				}
+				else
+				{
+					TIM2_DIR = 0;
+
+					// __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리
+					if((TIM2_CNT1 > TIM2_CNT2) && (TIM2_CNT1 - TIM2_CNT2 < 100)) TIM2_DIR = 1;
+				}
+
+				if(TIM2_DIR)
+				{
+					// Down Counting 방향으로 회전할 때
+					if(TIM2_CNT1 >= TIM2_CNT2) TIM2_DIFF = TIM2_CNT1 - TIM2_CNT2;
+					else TIM2_DIFF = (TIM2 -> ARR + TIM2_CNT1) - TIM2_CNT2 ;
+				}
+				else
+				{
+					// Up Counting 방향으로 회전할 때
+					if(TIM2_CNT2 >= TIM2_CNT1) TIM2_DIFF = TIM2_CNT2 - TIM2_CNT1;
+					else TIM2_DIFF = (TIM2 -> ARR + TIM2_CNT2) - TIM2_CNT1;
+				}
+
+				if((TIM2->SMCR & 0x03) == 0x03)
+				{
+					// X4 Mode 일때는 카운터가 4 증가할 때, 1개의 Pulse
+					TIM2_RPM_HALL = TIM2_DIFF * 60 / 4 / ONE_ROTATION_PULSES; //RPM 계산을 위해서는 x 60
+																			  //RPM of the motor shaft
+					TIM2_RPM_SHAFT = TIM2_RPM_HALL / 20; // RPM of the gearbox's output shaf
+
+				}
+				else
+				{
+					// X4 Mode 일때는 카운터가 2 증가할 때, 1개의 Pulse
+					TIM2_RPM_HALL = TIM2_DIFF * 60 / 2 / ONE_ROTATION_PULSES; //RPM 계산을 위해서는 x 60
+		      	  	  	  	  	  	  	  	  	  	  	  	  	  	  		  //RPM of the motor shaft
+					TIM2_RPM_SHAFT = TIM2_RPM_HALL / 20; // RPM of the gearbox's output shaf
+
+				}
+
+				tick = millis();
+				TIM2_CNT1 = TIM2 -> CNT;
+			}
+
+		    uartPrintf(_DEF_UART1, "dir :%d. diff:%d, RPM_HALL:%d, RPM_SHAFT:%d \r\n",TIM2_DIR, TIM2_DIFF,TIM2_RPM_HALL,TIM2_RPM_SHAFT);
+*/
+
+
+
+
+
+
+
+
+
+
+
+					//TODO 엔코더 모터 RPM 테스트 , TIM4에 달려있는 엔코더 모터만...
+/*
+					Go_Straight();
+					//Back();
+
+
+					if(millis() - tick > 1000L)
+					{
+					     // 1초마다 TIM2 카운터 증가 확인
+					     TIM4_CNT2 = TIM4->CNT;
+
+					      // 회전 방향 확인
+					   if(__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim4))
+					   {
+					        TIM4_DIR = 1;
+
+					        // __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리
+					   if((TIM4_CNT2 > TIM4_CNT1) && (TIM4_CNT2 - TIM4_CNT1 < 100)) TIM4_DIR = 0;
+					   }
+					   else
+					   {
+						   TIM4_DIR = 0;
+
+					     // __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리
+					     if((TIM4_CNT1 > TIM4_CNT2) && (TIM4_CNT1 - TIM4_CNT2 < 100)) TIM4_DIR = 1;
+					   }
+
+					   if(TIM4_DIR)
+					   {
+					     // Down Counting 방향으로 회전할 때
+					     if(TIM4_CNT1 >= TIM4_CNT2) TIM4_DIFF = TIM4_CNT1 - TIM4_CNT2;
+					     else TIM4_DIFF = (TIM4 -> ARR + TIM4_CNT1) - TIM4_CNT2 ;
+					   }
+					   else
+					   {
+					      // Up Counting 방향으로 회전할 때
+					      if(TIM4_CNT2 >= TIM4_CNT1) TIM4_DIFF = TIM4_CNT2 - TIM4_CNT1;
+					      else TIM4_DIFF = (TIM4 -> ARR + TIM4_CNT2) - TIM4_CNT1;
+					   }
+
+					   if((TIM4->SMCR & 0x03) == 0x03)
+					   {
+					     // X4 Mode 일때는 카운터가 4 증가할 때, 1개의 Pulse
+						   TIM4_RPM_HALL = TIM4_DIFF * 60 / 4 / ONE_ROTATION_PULSES; //RPM 계산을 위해서는 x 60
+						   	   	   	   	   	   	   	   	   	   	   	   	   	         //RPM of the motor shaft
+					       TIM4_RPM_SHAFT = TIM4_RPM_HALL / 20; // RPM of the gearbox's output shaf
+
+					    }
+					    else
+					    {
+					      // X4 Mode 일때는 카운터가 2 증가할 때, 1개의 Pulse
+					      TIM4_RPM_HALL = TIM4_DIFF * 60 / 2 / ONE_ROTATION_PULSES; //RPM 계산을 위해서는 x 60
+					      	  	  	  	  	  	  	  	  	  	  	  	  	  	  	//RPM of the motor shaft
+					      TIM4_RPM_SHAFT = TIM4_RPM_HALL / 20; // RPM of the gearbox's output shaf
+
+					    }
+
+					     tick = millis();
+					     TIM4_CNT1 = TIM4 -> CNT;
+					    }
+
+					    uartPrintf(_DEF_UART1, "dir :%d. diff:%d, RPM_HALL:%d, RPM_SHAFT:%d \r\n",TIM4_DIR, TIM4_DIFF,TIM4_RPM_HALL,TIM4_RPM_SHAFT);
+*/
+
+
+
+
+/*
+					//TODO 엔코더 모터 RPM 테스트 , TIM4, TIM2 에 달려있는 엔코더 모터두개 다
+
+					  Go_Straight();
+					 //Back();
+
+		  	  	  	  if(millis() - tick > 1000L)
+		  	  	  	  {
+
+		  	  	  		  TIM2_CNT2 = TIM2 -> CNT;
+		  	  	  		  TIM4_CNT2 = TIM4 -> CNT;
+
+		  	  	  		  // 회전 방향 확인
+		  	  	  		  if(__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim2) && __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim4) )
+		  	  	  	      {
+		  	  	  			  TIM2_DIR = 1;
+		  	  	  			  TIM4_DIR = 1;
+
+		  	  	  			  // __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리
+		  	  	  			  if(((TIM2_CNT2 > TIM2_CNT1) && (TIM2_CNT2 - TIM2_CNT1 < 100)) && ((TIM4_CNT2 > TIM4_CNT1) && (TIM4_CNT2 - TIM4_CNT1 < 100)))
+		  	  	  			  {
+		  	  	  				  TIM2_DIR = 0;
+		  	  	  				  TIM4_DIR = 0;
+		  	  	  			  }
+		  	  	  	      }
+		  	  	  		  else
+		  	  	  		  {
+		  	  	  			  TIM2_DIR = 0;
+		  	  	  			  TIM4_DIR = 0;
+
+		  	  	  			  // __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리
+		  	  	  			  if(((TIM2_CNT1 > TIM2_CNT2) && (TIM2_CNT1 - TIM2_CNT2 < 100)) && ((TIM4_CNT1 > TIM4_CNT2) && (TIM4_CNT1 - TIM4_CNT2 < 100)))
+		  	  	  			  {
+		  	  	  				  TIM2_DIR = 1;
+		  	  	  			  	  TIM4_DIR = 1;
+		  	  	  			  }
+
+		  	  	  		  }
+
+		  	  	  		  if(TIM2_DIR && TIM4_DIR)
+		  	  	  		  {
+		  	  	  			  // Down Counting 방향으로 회전할 때
+		  	  	  			  if((TIM2_CNT1 >= TIM2_CNT2) && (TIM4_CNT1 >= TIM4_CNT2))
+		  	  	  			  {
+		  	  	  				  TIM2_DIFF = TIM2_CNT1 - TIM2_CNT2;
+		  	  	  				  TIM4_DIFF = TIM4_CNT1 - TIM4_CNT2;
+		  	  	  			  }
+		  	  	  			  else
+		  	  	  			  {
+
+		  	  	  				  TIM2_DIFF = (TIM2 -> ARR + TIM2_CNT1) - TIM2_CNT2 ;
+		  	  	  				  TIM4_DIFF = (TIM4 -> ARR + TIM4_CNT1) - TIM4_CNT2 ;
+		  	  	  			  }
+		  	  	  		  }
+		  	  	  		  else
+		  	  	  		  {
+		  	  	  			  // Up Counting 방향으로 회전할 때
+		  	  	  			  if((TIM2_CNT2 >= TIM2_CNT1) && (TIM4_CNT2 >= TIM4_CNT1))
+		  	  	  			  {
+		  	  	  				 TIM2_DIFF = TIM2_CNT2 - TIM2_CNT1;
+		  	  	  				 TIM4_DIFF = TIM4_CNT2 - TIM4_CNT1;
+		  	  	  			  }
+		  	  	  			  else
+		  	  	  			  {
+		  	  	  				  TIM2_DIFF = (TIM2 -> ARR + TIM2_CNT2) - TIM2_CNT1 ;
+		  	  	  				  TIM4_DIFF = (TIM4 -> ARR + TIM4_CNT2) - TIM4_CNT1 ;
+		  	  	  			  }
+		  	  	  		  }
+
+		  	  	  		  if(((TIM2->SMCR & 0x03) == 0x03) && ((TIM4->SMCR & 0x03) == 0x03))
+		  	  	  		  {
+		  	  	  			  // X4 Mode 일때는 카운터가 4 증가할 때, 1개의 Pulse
+		  	  	  			  TIM2_RPM_HALL = TIM2_DIFF * 60 / 4 / ONE_ROTATION_PULSES;
+		  	  	  			  TIM4_RPM_HALL = TIM4_DIFF * 60 / 4 / ONE_ROTATION_PULSES;
+
+		  	  	  			  TIM2_RPM_SHAFT = TIM2_RPM_HALL / 20;
+		  	  	  			  TIM4_RPM_SHAFT = TIM4_RPM_HALL / 20;
+
+
+		  	  	  		  }
+		  	  	  		  else
+		  	  	  		  {
+
+		  	  	  			  TIM2_RPM_HALL = TIM2_DIFF * 60 / 2 / ONE_ROTATION_PULSES;
+		  	  	  			  TIM4_RPM_HALL = TIM4_DIFF * 60 / 2 / ONE_ROTATION_PULSES;
+
+		  	  	  			  TIM2_RPM_SHAFT = TIM2_RPM_HALL / 20;
+		  	  	  			  TIM4_RPM_SHAFT = TIM4_RPM_HALL / 20;
+
+		  	  	  		  }
+
+		  	  	  		  tick = millis();
+
+		  	  	  		  TIM2_CNT1 = TIM2 -> CNT;
+		  	  	  		  TIM4_CNT1 = TIM4 -> CNT;
+		  	  	  	  }
+
+		  	  	  	  uartPrintf(_DEF_UART1, "TIM2_DIR :%1d. TIM2_DIFF:%5d, TIM2_RPM_HALL:%4d, TIM2_RPM_SHAFT:%3d \r\nTIM4_DIR :%1d. TIM4_DIFF:%5d, TIM4_RPM_HALL:%4d, TIM4_RPM_SHAFT:%3d \r\n\n",
+											  TIM2_DIR, TIM2_DIFF, TIM2_RPM_HALL, TIM2_RPM_SHAFT,
+											  TIM4_DIR, TIM4_DIFF, TIM4_RPM_HALL, TIM4_RPM_SHAFT);
+
+
+*/
+
+
+
+		//TODO 엔코더 거리구하기 변수
+
 		Go_Straight();
+		//Back();
 
-		//TODO 엔코더 모터 RPM 테스트
-		    if(millis() - tick > 1000L)
-		    {
-		      /* 1초마다 TIM3 카운터 증가 확인 */
-		      cnt2 = TIM2->CNT;
+		TIM2_CNT = TIM2 -> CNT;
+		TIM4_CNT = TIM4 -> CNT;
 
-		      /* 회전 방향 확인 */
-		      if(__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim2))
-		      {
-		        dir = 1;
-
-		        /* __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리 */
-		        if((cnt2 > cnt1) && (cnt2 - cnt1 < 100)) dir = 0;
-		      }
-		      else
-		      {
-		        dir = 0;
-
-		        /* __HAL_TIM_IS_TIM_COUNTING_DOWN 매크로가 방향성을 잘못 알려주는 경우 예외처리 */
-		        if((cnt1 > cnt2) && (cnt1 - cnt2 < 100)) dir = 1;
-		      }
-
-		      if(dir)
-		      {
-		        /* Down Counting 방향으로 회전할 때 */
-		        if(cnt1 >= cnt2) diff = cnt1 - cnt2;
-		        else diff = (TIM2->ARR + cnt1) - cnt2 ;
-		      }
-		      else
-		      {
-		        /* Up Counting 방향으로 회전할 때 */
-		        if(cnt2 >= cnt1) diff = cnt2 - cnt1;
-		        else diff = (TIM2->ARR + cnt2) - cnt1 ;
-		      }
-
-		      if((TIM2->SMCR & 0x03) == 0x03)
-		      {
-		        /* X4 Mode 일때는 카운터가 4 증가할 때, 1개의 Pulse */
-		        speed = diff * 60 / 4 / ONE_ROTATION_PULSES; //RPM 계산을 위해서는 x 60
-		        										     //RPM of the motor shaft
-		        speed2 = speed/20; // RPM of the gearbox's output shaf
+		TL = TIM2_CNT * F;
+		TR = TIM4_CNT * F;
 
 
-		      }
-		      else
-		      {
-		        /* X4 Mode 일때는 카운터가 2 증가할 때, 1개의 Pulse */
-		        speed = diff * 60 / 2 / ONE_ROTATION_PULSES; //RPM 계산을 위해서는 x 60
-		        											 //RPM of the motor shaft
-		        speed2 = speed/20; // RPM of the gearbox's output shaf
+		//누적 이동거리는 다음처럼 구한다. 이동거리i = 이동거리i-1 + 현재이동거리... 이부분 참고해서 다시 수정
+	//	TC_1 = (TR+ TL) /2 ;
+
+	//	TC_2= TC_1+ TC_2;
+
+   //	Distance = TC_2 + TC_1;
 
 
-		      }
+	    Distance = (Distance-1) / TC_1 ;
 
-		      tick = millis();
-		      cnt1 = TIM2->CNT;
-		    }
-
-		    uartPrintf(_DEF_UART1, "dir :%d. diff:%d, speed:%d, speed2:%d \r\n",dir,diff,speed,speed2);
+	    uartPrintf(_DEF_UART1, "distance: %d\r\n", Distance);
 
 
 

@@ -6,16 +6,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="TIM"/>
+		<item key="selection" value="buf"/>
 		<list key="findhistory">
+			<item value="buf"/>
+			<item value="TIM4"/>
 			<item value="TIM"/>
 			<item value="Angle_Gz"/>
 			<item value="_mag_adjust"/>
 			<item value="TODO"/>
 			<item value="adjust"/>
 			<item value="RAD2DEG57.29578"/>
-			<item value="AC"/>
-			<item value="16384"/>
 		</list>
 		<list key="replacehistory">
 		</list>
