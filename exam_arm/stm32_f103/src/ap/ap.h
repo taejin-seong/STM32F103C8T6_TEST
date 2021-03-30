@@ -27,11 +27,9 @@ void apMain(void);
 // 엔코더 모터 RPM 변수
 #define ONE_ROTATION_PULSES 7
 // 엔코더 이동거리 변수
-#define D 65		// 바퀴 둘레   // TODO: 바퀴 둘레 수정
-
-#define G 20		// 기어비
-#define PI 3.14
-#define F (D * PI) / (G * ONE_ROTATION_PULSES ) // 1 thick당 이동한 거리
+#define D 29.0	// 바퀴 둘레  (바퀴 지름 * 3.14)   // TODO: 바퀴 둘레 수정
+#define G 20	// 기어비
+#define F D / (G * ONE_ROTATION_PULSES ) // 1 thick당 이동한 거리
 
 
 

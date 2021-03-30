@@ -6,16 +6,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="buf"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="이동거리"/>
+			<item value="TIM2_DIR"/>
 			<item value="buf"/>
 			<item value="TIM4"/>
 			<item value="TIM"/>
 			<item value="Angle_Gz"/>
 			<item value="_mag_adjust"/>
 			<item value="TODO"/>
-			<item value="adjust"/>
-			<item value="RAD2DEG57.29578"/>
 		</list>
 		<list key="replacehistory">
 		</list>

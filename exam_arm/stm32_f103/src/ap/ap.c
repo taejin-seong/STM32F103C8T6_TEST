@@ -63,13 +63,13 @@ void apMain(void)
 
 
 	// MPU9250  각도 값 테스트 변수
-//	int16_t AccData, MagData, GyroData ;
+	int16_t AccData, MagData, GyroData ;
 
     // MPU9250 축 테스트 변수
-//   int16_t Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z;
+   int16_t Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z;
 
    //상보 필터 테스트 변수
-/*
+
    int16_t Base_Ax, Base_Ay,Base_Az, Base_Gx, Base_Gy, Base_Gz;
    int16_t Las_Angle_Gx , Las_Angle_Gy, Las_Angle_Gz;
    int16_t Angle_Ax, Angle_Ay, Angle_Gx, Angle_Gy, Angle_Gz; //Angle_Az,
@@ -77,17 +77,17 @@ void apMain(void)
    int16_t Roll , Pitch , Yaw ;
    int16_t Yaw_G, Yaw_M;
 
-   float dt,pre_msec;
+   int32_t dt,pre_msec;
 
    calibrate(&Base_Ax, &Base_Ay, &Base_Az, &Base_Gx, &Base_Gy, &Base_Gz);
-*/
+
 
 
 	//엔코더 모터 테스트 변수
 
 	//   uint8_t rx_data;
-	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
-	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
+//	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+//	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
 
 
 /*
@@ -98,11 +98,15 @@ void apMain(void)
 
  	uint32_t tick;
 
+ 	// 현재 카운터와 tick 값
+	TIM2_CNT1 = TIM2 -> CNT;
+	TIM4_CNT1 = TIM4 -> CNT;
+
+	tick = millis();
+
 */
-
 	//엔코더 이동거리 테스트 변수
-
-	uint32_t TIM4_CNT, TIM2_CNT, Distance , TL, TR, TC_1, TC_2;
+//	uint32_t TIM4_CNT, TIM2_CNT, Distance, TL, TR, TC, Past_Distance ;
 
 
 	while(1)
@@ -167,7 +171,7 @@ void apMain(void)
 
 		//TODO: MPU9250: 변환행렬로 지자계 각도 비보정
 
-/*		  //단위시간 변화량
+		  //단위시간 변화량
 		  dt = (millis()-pre_msec)/1000.0;
 		  pre_msec = millis();
 
@@ -205,7 +209,7 @@ void apMain(void)
 
 		  uartPrintf(_DEF_UART1, "Roll:%d, Pitch %d, Yaw:%d , Yaw_G:%d, Yaw_M:%d \r\n", Roll, Pitch, Yaw, Yaw_G, Yaw_M);
 		  delay(5);
-*/
+
 
 
 
@@ -264,9 +268,9 @@ void apMain(void)
 
 
 
-		// 모터 제어 테스트
+		//TODO: 모터 제어 테스트
 
-	/*	Go_Straight();
+/*		Go_Straight();
 		delay(1000);
 		Stop();
 
@@ -281,8 +285,8 @@ void apMain(void)
 	    Turn_Right();
 	    delay(1000);
 	    Stop();
-
 */
+
 
 
 	    // 유아트 수신 테스트..
@@ -299,7 +303,7 @@ void apMain(void)
 
 
 
-		//라즈베리파이 초음파 장애물 감지시 모터 정지  또는 회전 테스트
+		//TODO: 라즈베리파이 초음파 장애물 감지시 모터 정지  또는 회전 테스트
 		/*
 		 * 1). 라즈베리파이 초음파 장애물 감지에 따라  모터 정지, 직진은 하나 라즈베리파이 서보모터는 정지하지 않음
 		 *     생각해서 코딩 다시 짜야댐
@@ -308,10 +312,11 @@ void apMain(void)
 		 *
 		 * 3). 실제로 사용할려면 while문에 스위치문 쓰기에는 무리가 있음 구조체나 다른 방안 검토
 		 */
+		/*
 
-			//uint8_t rx_data = uartRead(_DEF_UART1);
+			uint8_t rx_data = uartRead(_DEF_UART1);
 
-		/*	switch (rx_data)
+			switch (rx_data)
 			{
 				case 'f':
 					Go_Straight();
@@ -323,8 +328,8 @@ void apMain(void)
 				default:
 					break;
 			}
+		  */
 
-			*/
 
 
 
@@ -439,6 +444,7 @@ void apMain(void)
 					//Back();
 
 
+
 					if(millis() - tick > 1000L)
 					{
 					     // 1초마다 TIM2 카운터 증가 확인
@@ -500,11 +506,11 @@ void apMain(void)
 
 
 
-/*
+
 					//TODO 엔코더 모터 RPM 테스트 , TIM4, TIM2 에 달려있는 엔코더 모터두개 다
 
-					  Go_Straight();
-					 //Back();
+/*					    Go_Straight();
+					 //	Back();
 
 		  	  	  	  if(millis() - tick > 1000L)
 		  	  	  	  {
@@ -578,7 +584,6 @@ void apMain(void)
 		  	  	  			  TIM2_RPM_SHAFT = TIM2_RPM_HALL / 20;
 		  	  	  			  TIM4_RPM_SHAFT = TIM4_RPM_HALL / 20;
 
-
 		  	  	  		  }
 		  	  	  		  else
 		  	  	  		  {
@@ -602,35 +607,34 @@ void apMain(void)
 											  TIM4_DIR, TIM4_DIFF, TIM4_RPM_HALL, TIM4_RPM_SHAFT);
 
 
+
 */
 
 
-
 		//TODO 엔코더 거리구하기 변수
-
+/*
 		Go_Straight();
 		//Back();
+
+
 
 		TIM2_CNT = TIM2 -> CNT;
 		TIM4_CNT = TIM4 -> CNT;
 
-		TL = TIM2_CNT * F;
-		TR = TIM4_CNT * F;
+
+		TL = (TIM2_CNT / 4) * F;
+		TR = (TIM4_CNT / 4) * F;
 
 
-		//누적 이동거리는 다음처럼 구한다. 이동거리i = 이동거리i-1 + 현재이동거리... 이부분 참고해서 다시 수정
-	//	TC_1 = (TR+ TL) /2 ;
+		TC = (TR + TL) / 2;  // 현재 이동 거리
+		Past_Distance += TC; // 과거 누적 이동거리
 
-	//	TC_2= TC_1+ TC_2;
-
-   //	Distance = TC_2 + TC_1;
+	    Distance =  (Past_Distance - 1) / TC ;  // 현재 누적 이동거리
 
 
-	    Distance = (Distance-1) / TC_1 ;
+	    uartPrintf(_DEF_UART1, "distance: %d TIM2: %d  TIM4: %d\r\n", Distance, TIM2_CNT, TIM4_CNT);
 
-	    uartPrintf(_DEF_UART1, "distance: %d\r\n", Distance);
-
-
+*/
 
 
 	}
