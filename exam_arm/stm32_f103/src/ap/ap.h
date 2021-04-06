@@ -19,15 +19,15 @@ void apMain(void);
 
 
 // MPU9250 상보필터 변수
-#define Alpha  0.96
-#define Beta   0.92
-#define DEG2RAD   0.01745  // pi/180
-#define RAD2DEG   57.29578 // 180/pi
+#define Alpha  0.96f
+#define Beta   0.92f
+#define DEG2RAD   0.01745f  // pi/180
+#define RAD2DEG   57.29578f // 180/pi
 
 // 엔코더 모터 RPM 변수
 #define ONE_ROTATION_PULSES 7
 // 엔코더 이동거리 변수
-#define D 29.0	// 바퀴 둘레  (바퀴 지름 * 3.14)   // TODO: 바퀴 둘레 수정
+#define D 29.0f	// 바퀴 둘레  (바퀴 지름 * 3.14)   // TODO: 바퀴 둘레 수정
 #define G 20	// 기어비
 #define F D / (G * ONE_ROTATION_PULSES ) // 1 thick당 이동한 거리
 

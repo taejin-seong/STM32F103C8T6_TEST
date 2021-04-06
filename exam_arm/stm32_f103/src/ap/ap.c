@@ -63,19 +63,18 @@ void apMain(void)
 
 
 	// MPU9250  각도 값 테스트 변수
-	int16_t AccData, MagData, GyroData ;
+	//int16_t AccData, MagData, GyroData ;
 
     // MPU9250 축 테스트 변수
    int16_t Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z;
 
    //상보 필터 테스트 변수
 
+ //  int16_t Reward_Mx, Reward_My; // 변환행렬 지자계 각도 보정 변수 *
    int16_t Base_Ax, Base_Ay,Base_Az, Base_Gx, Base_Gy, Base_Gz;
    int16_t Las_Angle_Gx , Las_Angle_Gy, Las_Angle_Gz;
    int16_t Angle_Ax, Angle_Ay, Angle_Gx, Angle_Gy, Angle_Gz; //Angle_Az,
-   //int16_t Reward_Mx, Reward_My; // 변환행렬 지자계 각도 보정 변수 *
-   int16_t Roll , Pitch , Yaw ;
-   int16_t Yaw_G, Yaw_M;
+   int16_t Roll, Pitch, Yaw, Yaw_G, Yaw_M;
 
    int32_t dt,pre_msec;
 
@@ -113,12 +112,12 @@ void apMain(void)
 	{
 
 		//TODO: MPU9250: 변환행렬로 지자계 각도 보정 할 시...
-/*
+
 		  //단위시간 변화량
 		  dt = (millis()-pre_msec)/1000.0;
 		  pre_msec = millis();
 
-
+/*
 		  MPU6050_GetData_Axis(&Ac_X, &Ac_Y, &Ac_Z, &Gy_X, &Gy_Y, &Gy_Z, &Ma_X, &Ma_Y, &Ma_Z);
 
 		  Las_Angle_Gx = Roll;	//최근값 누적
@@ -200,12 +199,30 @@ void apMain(void)
 		  Roll  = Alpha * Angle_Gx + (1.000 - Alpha) * Angle_Ax;
 		  Pitch = Alpha * Angle_Gy + (1.000 - Alpha) * Angle_Ay;
 
+
           Yaw_G =  Angle_Gz;
           Yaw_M =  -atan2(Ma_X, Ma_Y) * RAD2DEG;
 
 
 
 	      Yaw = Beta * Yaw_G + (1.000 - Beta) * Yaw_M;
+
+	      //TODO MPU9250 Yaw 제어 테스트 , GO기준값 잡고 그거 중심으로 R,L 범위 잡기, 실제 차량에서는 기준점을 잡는 것이 중요
+	      /*
+	      if( (Yaw > -14) && (0 > Yaw))//G: 기준 값 -14보다 크고 0보다 작을 경우
+	      {
+	    	  uartPrintf(_DEF_UART1, "G. %d\n\r", Yaw);
+	      }
+	      else if (-14 < Yaw) //R: 기준 값 -14보다 작을 경우
+	      {
+	    	  uartPrintf(_DEF_UART1, "R. %d\n\r", Yaw);
+	      }
+	      else if (0 > Yaw) //L: 기준 값 0보다 클 경우
+	      {
+	    	 uartPrintf(_DEF_UART1, "L.%d\n\r", Yaw);
+	      }
+		  */
+
 
 		  uartPrintf(_DEF_UART1, "Roll:%d, Pitch %d, Yaw:%d , Yaw_G:%d, Yaw_M:%d \r\n", Roll, Pitch, Yaw, Yaw_G, Yaw_M);
 		  delay(5);
