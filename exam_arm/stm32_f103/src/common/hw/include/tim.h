@@ -17,7 +17,6 @@
   ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -26,10 +25,7 @@ extern "C" {
 #include "hw_def.h"
 
 /* USER CODE BEGIN Includes */
-
 #ifdef _USE_HW_TIM
-
-/* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
