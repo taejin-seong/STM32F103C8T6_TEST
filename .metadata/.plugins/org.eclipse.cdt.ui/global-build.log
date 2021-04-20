@@ -1,4 +1,4 @@
-02:11:08 **** Build of configuration Debug for project stm32_f103 ****
+16:44:25 **** Build of configuration Debug for project stm32_f103 ****
 make -j4 all 
 arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
 arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
@@ -25,25 +25,111 @@ arm-none-eabi-gcc "../src/hw/driver/spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM3
 arm-none-eabi-gcc "../src/hw/driver/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/tim.d" -MT"src/hw/driver/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/tim.o"
 arm-none-eabi-gcc "../src/hw/driver/uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/uart.d" -MT"src/hw/driver/uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/uart.o"
 arm-none-eabi-gcc "../src/hw/hw.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/hw.d" -MT"src/hw/hw.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/hw.o"
-arm-none-eabi-gcc "../src/common/core/qbuffer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/common/core/qbuffer.d" -MT"src/common/core/qbuffer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/common/core/qbuffer.o"
-arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"src/bsp/startup/startup_stm32f103c8tx.d" -MT"src/bsp/startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/startup/startup_stm32f103c8tx.o" "../src/bsp/startup/startup_stm32f103c8tx.s"
 arm-none-eabi-gcc "../src/bsp/bsp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/bsp.d" -MT"src/bsp/bsp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/bsp.o"
 arm-none-eabi-gcc "../src/bsp/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/stm32f1xx_hal_msp.d" -MT"src/bsp/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/stm32f1xx_hal_msp.o"
 arm-none-eabi-gcc "../src/bsp/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/stm32f1xx_it.d" -MT"src/bsp/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/stm32f1xx_it.o"
-arm-none-eabi-gcc "../src/bsp/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/syscalls.d" -MT"src/bsp/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/syscalls.o"
-arm-none-eabi-gcc "../src/bsp/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/sysmem.d" -MT"src/bsp/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/sysmem.o"
-arm-none-eabi-gcc "../src/bsp/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/system_stm32f1xx.d" -MT"src/bsp/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/system_stm32f1xx.o"
 arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
 arm-none-eabi-gcc "../src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/main.d" -MT"src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/main.o"
 arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: stm32_f103.elf
  
-arm-none-eabi-size   stm32_f103.elf 
 arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
 arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
 arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
    text	   data	    bss	    dec	    hex	filename
-  36776	    524	   2420	  39720	   9b28	stm32_f103.elf
+  37520	    524	   2420	  40464	   9e10	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.hex
+ 
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+17:09:50 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/bsp/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/stm32f1xx_hal_msp.d" -MT"src/bsp/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../src/bsp/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/stm32f1xx_it.d" -MT"src/bsp/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/stm32f1xx_it.o"
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc "../src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/main.d" -MT"src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/main.o"
+In file included from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp/stm32f1xx_hal_conf.h:333,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp/bsp.h:18,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw/hw_def.h:15,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw/hw.h:14,
+                 from ../src/ap/ap.h:13,
+                 from ../src/ap/ap.c:12:
+../src/ap/ap.c: In function 'apMain':
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1232:75: error: 'TIM_TypeDef' {aka 'struct <anonymous>'} has no member named 'Instance'
+ 1232 | #define __HAL_TIM_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__) ((((__HANDLE__)->Instance->DIER & (__INTERRUPT__)) \
+      |                                                                           ^~
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:3659:41: note: in expansion of macro '__HAL_TIM_GET_IT_SOURCE'
+ 3659 | #define TIM_GET_ITSTATUS                __HAL_TIM_GET_IT_SOURCE
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~
+../src/ap/ap.c:650:20: note: in expansion of macro 'TIM_GET_ITSTATUS'
+  650 |   uint8_t count1 = TIM_GET_ITSTATUS(TIM2, TIM_IT_UPDATE);
+      |                    ^~~~~~~~~~~~~~~~
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1232:75: error: 'TIM_TypeDef' {aka 'struct <anonymous>'} has no member named 'Instance'
+ 1232 | #define __HAL_TIM_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__) ((((__HANDLE__)->Instance->DIER & (__INTERRUPT__)) \
+      |                                                                           ^~
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:3659:41: note: in expansion of macro '__HAL_TIM_GET_IT_SOURCE'
+ 3659 | #define TIM_GET_ITSTATUS                __HAL_TIM_GET_IT_SOURCE
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~
+../src/ap/ap.c:651:20: note: in expansion of macro 'TIM_GET_ITSTATUS'
+  651 |   uint8_t count2 = TIM_GET_ITSTATUS(TIM4, TIM_IT_UPDATE);
+      |                    ^~~~~~~~~~~~~~~~
+make: *** [src/ap/subdir.mk:19: src/ap/ap.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:12:52 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+In file included from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp/stm32f1xx_hal_conf.h:333,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp/bsp.h:18,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw/hw_def.h:15,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw/hw.h:14,
+                 from ../src/ap/ap.h:13,
+                 from ../src/ap/ap.c:12:
+../src/ap/ap.c: In function 'apMain':
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1232:75: error: 'TIM_TypeDef' {aka 'struct <anonymous>'} has no member named 'Instance'
+ 1232 | #define __HAL_TIM_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__) ((((__HANDLE__)->Instance->DIER & (__INTERRUPT__)) \
+      |                                                                           ^~
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:3659:41: note: in expansion of macro '__HAL_TIM_GET_IT_SOURCE'
+ 3659 | #define TIM_GET_ITSTATUS                __HAL_TIM_GET_IT_SOURCE
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~
+../src/ap/ap.c:651:7: note: in expansion of macro 'TIM_GET_ITSTATUS'
+  651 |   if (TIM_GET_ITSTATUS(TIM2, TIM_IT_UPDATE) && TIM_GET_ITSTATUS(TIM4, TIM_IT_UPDATE) != RESET)
+      |       ^~~~~~~~~~~~~~~~
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1232:75: error: 'TIM_TypeDef' {aka 'struct <anonymous>'} has no member named 'Instance'
+ 1232 | #define __HAL_TIM_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__) ((((__HANDLE__)->Instance->DIER & (__INTERRUPT__)) \
+      |                                                                           ^~
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:3659:41: note: in expansion of macro '__HAL_TIM_GET_IT_SOURCE'
+ 3659 | #define TIM_GET_ITSTATUS                __HAL_TIM_GET_IT_SOURCE
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~
+../src/ap/ap.c:651:48: note: in expansion of macro 'TIM_GET_ITSTATUS'
+  651 |   if (TIM_GET_ITSTATUS(TIM2, TIM_IT_UPDATE) && TIM_GET_ITSTATUS(TIM4, TIM_IT_UPDATE) != RESET)
+      |                                                ^~~~~~~~~~~~~~~~
+make: *** [src/ap/subdir.mk:19: src/ap/ap.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:15:03 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:668:5: warning: 'TIM2_CNT' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  668 |     uartPrintf(_DEF_UART1, "distance: %.3f TIM2: %d  TIM4: %d\r\n", Distance, TIM2_CNT, TIM4_CNT);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ap/ap.c:668:5: warning: 'TIM4_CNT' may be used uninitialized in this function [-Wmaybe-uninitialized]
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37608	    524	   2420	  40552	   9e68	stm32_f103.elf
 Finished building: default.size.stdout
  
 Finished building: stm32_f103.bin
@@ -52,7 +138,34 @@ Finished building: stm32_f103.hex
  
 Finished building: stm32_f103.list
  
-02:16:29 **** Incremental Build of configuration Debug for project stm32_f103 ****
+17:15:33 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:111:22: warning: unused variable 'TIM2_CNT' [-Wunused-variable]
+  111 |  uint32_t  TIM4_CNT, TIM2_CNT;
+      |                      ^~~~~~~~
+../src/ap/ap.c:111:12: warning: unused variable 'TIM4_CNT' [-Wunused-variable]
+  111 |  uint32_t  TIM4_CNT, TIM2_CNT;
+      |            ^~~~~~~~
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37584	    524	   2420	  40528	   9e50	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+17:16:07 **** Incremental Build of configuration Debug for project stm32_f103 ****
 make -j4 all 
 arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
 arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -63,7 +176,96 @@ arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
 arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
 arm-none-eabi-size   stm32_f103.elf 
    text	   data	    bss	    dec	    hex	filename
-  36792	    524	   2420	  39736	   9b38	stm32_f103.elf
+  37592	    524	   2420	  40536	   9e58	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+17:17:07 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37584	    524	   2420	  40528	   9e50	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.bin
+ 
+Finished building: stm32_f103.hex
+ 
+ 
+Finished building: stm32_f103.list
+ 
+17:18:20 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37584	    524	   2420	  40528	   9e50	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+17:19:07 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37600	    524	   2420	  40544	   9e60	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+17:22:05 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:90:1: error: expected expression before '/' token
+   90 | /HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
+      | ^
+make: *** [src/ap/subdir.mk:19: src/ap/ap.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:22:11 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37896	    524	   2420	  40840	   9f88	stm32_f103.elf
 Finished building: default.size.stdout
  
 Finished building: stm32_f103.hex
@@ -71,4 +273,597 @@ Finished building: stm32_f103.bin
  
  
 Finished building: stm32_f103.list
+ 
+17:31:29 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+In file included from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:131,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:30,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:29,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp/stm32f1xx_hal_conf.h:237,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp/bsp.h:18,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw/hw_def.h:15,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw/hw.h:14,
+                 from ../src/ap/ap.h:13,
+                 from ../src/ap/ap.c:12:
+../src/ap/ap.c: In function 'apMain':
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:3969:45: warning: statement with no effect [-Wunused-value]
+ 3969 | #define TIM_SR_UIF_Msk                      (0x1UL << TIM_SR_UIF_Pos)           /*!< 0x00000001 */
+      |                                             ^
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:3970:45: note: in expansion of macro 'TIM_SR_UIF_Msk'
+ 3970 | #define TIM_SR_UIF                          TIM_SR_UIF_Msk                     /*!<Update interrupt Flag */
+      |                                             ^~~~~~~~~~~~~~
+../src/ap/ap.c:651:4: note: in expansion of macro 'TIM_SR_UIF'
+  651 |    TIM_SR_UIF
+      |    ^~~~~~~~~~
+../src/ap/ap.c:652:3: error: expected ';' before 'if'
+  652 |   if (TIM_GET_ITSTATUS(&htim2, TIM_IT_UPDATE) != RESET)
+      |   ^~
+../src/ap/ap.c:115:20: warning: unused variable 'Thick_Right' [-Wunused-variable]
+  115 |  float Thick_Left, Thick_Right, Thick_Center;
+      |                    ^~~~~~~~~~~
+../src/ap/ap.c:115:8: warning: unused variable 'Thick_Left' [-Wunused-variable]
+  115 |  float Thick_Left, Thick_Right, Thick_Center;
+      |        ^~~~~~~~~~
+../src/ap/ap.c:114:14: warning: unused variable 'One_Thick_Distance' [-Wunused-variable]
+  114 |  const float One_Thick_Distance = (float)( CIRCUMFERENCE / (GEAR_RATIO * ENCODER_PULSES ) );
+      |              ^~~~~~~~~~~~~~~~~~
+make: *** [src/ap/subdir.mk:19: src/ap/ap.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:31:35 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+In file included from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp/stm32f1xx_hal_conf.h:333,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp/bsp.h:18,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw/hw_def.h:15,
+                 from C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw/hw.h:14,
+                 from ../src/ap/ap.h:13,
+                 from ../src/ap/ap.c:12:
+../src/ap/ap.c: In function 'apMain':
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1232:60: error: expected identifier before '(' token
+ 1232 | #define __HAL_TIM_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__) ((((__HANDLE__)->Instance->DIER & (__INTERRUPT__)) \
+      |                                                            ^
+C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:3659:41: note: in expansion of macro '__HAL_TIM_GET_IT_SOURCE'
+ 3659 | #define TIM_GET_ITSTATUS                __HAL_TIM_GET_IT_SOURCE
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~
+../src/ap/ap.c:654:13: note: in expansion of macro 'TIM_GET_ITSTATUS'
+  654 |     if  (&& TIM_GET_ITSTATUS(&htim4, TIM_IT_UPDATE) != RESET)
+      |             ^~~~~~~~~~~~~~~~
+make: *** [src/ap/subdir.mk:19: src/ap/ap.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:31:47 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37600	    524	   2420	  40544	   9e60	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+17:32:25 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37600	    524	   2420	  40544	   9e60	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+17:34:44 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37600	    524	   2420	  40544	   9e60	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.hex
+ 
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+18:15:20 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:662:9: warning: statement with no effect [-Wunused-value]
+  662 |     Pos == 0;
+      |     ~~~~^~~~
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37608	    524	   2420	  40552	   9e68	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.hex
+ 
+ 
+Finished building: stm32_f103.bin
+ 
+Finished building: stm32_f103.list
+ 
+18:15:41 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37616	    524	   2420	  40560	   9e70	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.hex
+ 
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+18:36:09 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37600	    524	   2420	  40544	   9e60	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+18:39:49 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../src/ap/ap.c:20:7: warning: variable 'Distance' set but not used [-Wunused-but-set-variable]
+   20 | float Distance, Past_Distance = 0.0;
+      |       ^~~~~~~~
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:707:58: error: 'Distance' undeclared (first use in this function)
+  707 |     uartPrintf(_DEF_UART1, "distance: %.3f  pos:%d\r\n", Distance,Pos);
+      |                                                          ^~~~~~~~
+../src/ap/ap.c:707:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/ap/ap.c:707:67: error: 'Pos' undeclared (first use in this function); did you mean 'cos'?
+  707 |     uartPrintf(_DEF_UART1, "distance: %.3f  pos:%d\r\n", Distance,Pos);
+      |                                                                   ^~~
+      |                                                                   cos
+make: *** [src/ap/subdir.mk:19: src/ap/ap.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+18:40:24 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37608	    524	   2420	  40552	   9e68	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+18:43:47 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37608	    524	   2420	  40552	   9e68	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+18:44:33 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37608	    524	   2420	  40552	   9e68	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+20:45:09 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
+arm-none-eabi-gcc "../src/hw/driver/i2c.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/i2c.d" -MT"src/hw/driver/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/i2c.o"
+arm-none-eabi-gcc "../src/hw/driver/led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/led.d" -MT"src/hw/driver/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/led.o"
+arm-none-eabi-gcc "../src/hw/driver/motor.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/motor.d" -MT"src/hw/driver/motor.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/motor.o"
+arm-none-eabi-gcc "../src/hw/driver/mpu9250.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/mpu9250.d" -MT"src/hw/driver/mpu9250.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/mpu9250.o"
+arm-none-eabi-gcc "../src/hw/driver/nrf24l01.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/nrf24l01.d" -MT"src/hw/driver/nrf24l01.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/nrf24l01.o"
+arm-none-eabi-gcc "../src/hw/driver/spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/spi.d" -MT"src/hw/driver/spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/spi.o"
+arm-none-eabi-gcc "../src/hw/driver/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/tim.d" -MT"src/hw/driver/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/tim.o"
+arm-none-eabi-gcc "../src/hw/driver/uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/uart.d" -MT"src/hw/driver/uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/uart.o"
+arm-none-eabi-gcc "../src/hw/hw.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/hw.d" -MT"src/hw/hw.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/hw.o"
+arm-none-eabi-gcc "../src/bsp/bsp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/bsp.d" -MT"src/bsp/bsp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/bsp.o"
+arm-none-eabi-gcc "../src/bsp/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/stm32f1xx_hal_msp.d" -MT"src/bsp/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../src/bsp/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/stm32f1xx_it.d" -MT"src/bsp/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/stm32f1xx_it.o"
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc "../src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/main.d" -MT"src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/main.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36808	    524	   2420	  39752	   9b48	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:06:13 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:653:12: error: 'TIM2TIM4' undeclared (first use in this function)
+  653 |     if  ( (TIM2TIM4 -> CNT -> CNT != TIM2_CNT2) && (TIM4 -> CNT != TIM4_CNT2) )
+      |            ^~~~~~~~
+../src/ap/ap.c:653:12: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/ap/subdir.mk:19: src/ap/ap.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:06:53 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36864	    524	   2420	  39808	   9b80	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:07:58 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36864	    524	   2420	  39808	   9b80	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:16:18 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36832	    524	   2420	  39776	   9b60	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:17:55 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36848	    524	   2420	  39792	   9b70	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:23:53 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:654:10: warning: statement with no effect [-Wunused-value]
+  654 |    Pos_L == 0; }
+      |    ~~~~~~^~~~
+../src/ap/ap.c:661:10: warning: statement with no effect [-Wunused-value]
+  661 |    Pos_R == 0; }
+      |    ~~~~~~^~~~
+../src/ap/ap.c:663:14: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  663 |   else{ Pos_L, Pos_R = 0;}
+      |              ^
+../src/ap/ap.c:669:81: error: 'Pos' undeclared (first use in this function); did you mean 'cos'?
+  669 |   uartPrintf(_DEF_UART1, "cnt:%d distance: %.3f  pos:%d\r\n", TIM4_CNT,Distance,Pos);
+      |                                                                                 ^~~
+      |                                                                                 cos
+../src/ap/ap.c:669:81: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/ap/subdir.mk:19: src/ap/ap.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+21:24:34 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:663:14: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  663 |   else{ Pos_L, Pos_R = 0;}
+      |              ^
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36880	    524	   2420	  39824	   9b90	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:24:57 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36888	    524	   2420	  39832	   9b98	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.hex
+ 
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:31:15 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:113:11: warning: variable 'Distance' set but not used [-Wunused-but-set-variable]
+  113 |     float Distance, Past_Distance = 0.0;
+      |           ^~~~~~~~
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36896	    524	   2420	  39840	   9ba0	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:34:29 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:113:11: warning: variable 'Distance' set but not used [-Wunused-but-set-variable]
+  113 |     float Distance, Past_Distance = 0.0;
+      |           ^~~~~~~~
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36856	    524	   2420	  39800	   9b78	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:35:22 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36856	    524	   2420	  39800	   9b78	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.bin
+Finished building: stm32_f103.hex
+ 
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:51:40 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36856	    524	   2420	  39800	   9b78	stm32_f103.elf
+Finished building: default.size.stdout
+Finished building: stm32_f103.bin
+ 
+Finished building: stm32_f103.hex
+ 
+ 
+Finished building: stm32_f103.list
+ 
+21:59:57 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/ap" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/bsp" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/hw" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/lib/cube_fw103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103/exam_arm/stm32_f103/src/common/core" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32_f103.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103\exam_arm\stm32_f103\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_f103.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_f103.elf
+ 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36856	    524	   2420	  39800	   9b78	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_f103.hex
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
+ 
+23:52:56 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36856	    524	   2420	  39800	   9b78	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+00:04:01 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36856	    524	   2420	  39800	   9b78	stm32_f103.elf
+Finished building: default.size.stdout
+ 
+00:08:33 **** Incremental Build of configuration Debug for project stm32_f103 ****
+make -j4 all 
+arm-none-eabi-size   stm32_f103.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36856	    524	   2420	  39800	   9b78	stm32_f103.elf
+Finished building: default.size.stdout
  

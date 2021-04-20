@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="tick"/>
+		<item key="selection" value="HAL_TIM_Encoder_GetState"/>
 		<list key="findhistory">
+			<item value="ONE_RO"/>
 			<item value="tick"/>
 			<item value="ONE_ROTATION_PULSES"/>
 			<item value="CONFIG"/>
@@ -15,7 +16,6 @@
 			<item value="ACCEL_YOU"/>
 			<item value="ACCEL_OUT_H"/>
 			<item value="ACCEL_XOUT_H"/>
-			<item value=" deg2rad"/>
 		</list>
 		<list key="replacehistory">
 		</list>

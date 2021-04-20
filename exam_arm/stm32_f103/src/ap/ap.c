@@ -107,11 +107,10 @@ void apMain(void)
 
 	//TODO:엔코더 이동거리 테스트 변수
 	uint32_t  TIM4_CNT, TIM2_CNT;
-	 // 1 thick당 이동한 거리 (mm 단위)
-	const float One_Thick_Distance = (float)( CIRCUMFERENCE / (GEAR_RATIO * ONE_ROTATION_PULSES ) );
+    uint8_t Pos_L, Pos_R = 0;
+	const float One_Thick_Distance = (float)( CIRCUMFERENCE / (GEAR_RATIO * ENCODER_PULSES ) );
 	float Thick_Left, Thick_Right, Thick_Center;
     float Distance, Past_Distance = 0.0;
-
 
 
 
@@ -642,24 +641,70 @@ void apMain(void)
 
 		//Go_Straight();
 		Back();
-
-
-
 		TIM2_CNT = TIM2 -> CNT;
 		TIM4_CNT = TIM4 -> CNT;
 
-		Thick_Left  = (TIM2_CNT / 4)  * One_Thick_Distance; //Pulse가 한주기에 카운터가 4만큼 증가(X4체배)
-		Thick_Right = (TIM4_CNT / 4)  * One_Thick_Distance; //카운터 4개 셋트가 7번나와야지 한바퀴 돈 것
-																//이거 가지고 카운터 7번 나오는 카운트 수 세야함 todo
+		if (TIM2_CNT < 560) // ppr * step * gear (7  * 4체배 * 20 )
+		{
+			Pos_L ++;
+			if (Pos_L == 140) // 샤프트 축 한바퀴 회전 시 총 출력되는 엔코더 펄스 수
+			{
+				Thick_Left  =   One_Thick_Distance;
+				Pos_L = 0;
+			}
+		}
 
+		if (TIM4_CNT < 560)
+		{
+			Pos_R ++;
+			if (Pos_R == 140)
+			{
+				Thick_Right =   One_Thick_Distance;
+				Pos_R = 0;
+			}
+		}
+
+		else
+		{
+			Pos_L = 0; Pos_R = 0;
+		}
 
 		Thick_Center = (Thick_Right + Thick_Left) / 2;  // 현재 이동 거리
 		Past_Distance += Thick_Center ; // 과거 누적 이동거리
 
-	    Distance =  ( (Past_Distance - 1) + Thick_Center) / 1000.0f ;  // 현재 누적 이동거리
+		Distance =  ( (Past_Distance - 1) + Thick_Center) / 1000.0f ;  // 현재 누적 이동거리
+		//uartPrintf(_DEF_UART1, " Thick_Center: %.3f  Past_Distance: %.3f \r\n", Thick_Center,Past_Distance);
+		uartPrintf(_DEF_UART1, "cnt:%d,%d distance: %.3fM  pos:%d, %d\r\n", TIM2_CNT,TIM4_CNT,Distance,Pos_L, Pos_R);
+
+/*
+
+		if  ( TIM2_CNT < 560 ) {
+		if  ( TIM4_CNT < 560 ) {
+
+			Pos ++;
+
+			if (Pos == 140)
+			{
+				Pos = 0;
+				Thick_Left  = Pos  *  One_Thick_Distance; //Pulse가 한주기에 카운터가 4만큼 증가(X4체배)
+				Thick_Right = Pos  *  One_Thick_Distance; //카운터 4개 셋트가 140번나와야지 한바퀴 돈 것
+														  //이거 가지고 카운터 140번 나오는 카운트 수 세야함 todo
+
+				Thick_Center = (Thick_Right + Thick_Left) / 2;  // 현재 이동 거리
+				Past_Distance += Thick_Center ; // 과거 누적 이동거리
+
+			    Distance =  ( (Past_Distance - 1) + Thick_Center) / 1000.0f ;  // 현재 누적 이동거리
+			    uartPrintf(_DEF_UART1, "distance: %.3f  pos:%d\r\n", Distance,Pos);
+			}
+
+		}
+	}
+
+*/
+
 
 	   // uartPrintf(_DEF_UART1, "l:%.3f, r:%.3f\n\r",Thick_Left, Thick_Right);
-	   uartPrintf(_DEF_UART1, "distance: %.3f TIM2: %d  TIM4: %d\r\n", Distance, TIM2_CNT, TIM4_CNT);
+	  // uartPrintf(_DEF_UART1, "distance: %.3f  pos:%d\r\n", Distance,Pos);
 
 
 
