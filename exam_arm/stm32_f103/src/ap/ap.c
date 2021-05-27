@@ -35,7 +35,7 @@ void apInit(void)
 
 
    // nRF24L01 수신 코드
-  /*
+
    while(NRF24L01_Check())
   	{
   		uartPrintf(_DEF_UART1,"NRF24L01 wireless module cannot be found by hardware\n");
@@ -46,7 +46,7 @@ void apInit(void)
 
   	NRF24L01_RX_Mode();
     uartPrintf(_DEF_UART1, "Enter data receiving mode\n");
-   */
+
 }
 
 
@@ -59,7 +59,7 @@ void apMain(void)
 //	uint8_t tmp_buf[]="Hey, data is received!";
 
 	// nRF24L01 수신 코드 (받을 데이터 버퍼)
-//	uint8_t tmp_buf[256]; // 임시로 지정
+	uint8_t tmp_buf[256]; // 임시로 지정
 
 
 	// MPU9250  각도 값 테스트 변수
@@ -86,8 +86,8 @@ void apMain(void)
 	//엔코더 모터 테스트 변수
 
 //	uint8_t rx_data;
-	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
-	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
+//	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+//	HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
 
 
 /*
@@ -106,12 +106,13 @@ void apMain(void)
 */
 
 	//TODO:엔코더 이동거리 테스트 변수
+/*
 	uint32_t  TIM4_CNT, TIM2_CNT;
-    uint8_t Pos_L, Pos_R = 0;
+  uint8_t Pos_L, Pos_R = 0;
 	const float One_Thick_Distance = (float)( CIRCUMFERENCE / (GEAR_RATIO * ENCODER_PULSES ) );
 	float Thick_Left, Thick_Right, Thick_Center;
-    float Distance, Past_Distance = 0.0;
-
+  float Distance, Past_Distance = 0.0;
+*/
 
 
 
@@ -276,7 +277,7 @@ void apMain(void)
 		*/
 
 		//nRF24L01 수신 코드
-		/*
+
 		if(NRF24L01_RxPacket(tmp_buf)==0)
 		{
 			// tmp_buf[32]=0;//Add string terminator
@@ -289,7 +290,7 @@ void apMain(void)
 		}
 
 		HAL_Delay(10);
-		*/
+
 
 
 
@@ -640,7 +641,7 @@ void apMain(void)
 		//TODO 엔코더 거리구하기
 
 		//Go_Straight();
-		Back();
+/*		Back();
 		TIM2_CNT = TIM2 -> CNT;
 		TIM4_CNT = TIM4 -> CNT;
 
@@ -672,9 +673,9 @@ void apMain(void)
 		Thick_Center = (Thick_Right + Thick_Left) / 2;  // 현재 이동 거리
 		Past_Distance += Thick_Center ; // 과거 누적 이동거리
 
-		Distance =  ( (Past_Distance - 1) + Thick_Center) / 1000.0f ;  // 현재 누적 이동거리
+		Distance =  ( (Past_Distance - 1) + Thick_Center) / 1000.0f ;  // 현재 누적 이동거리 */
 		//uartPrintf(_DEF_UART1, " Thick_Center: %.3f  Past_Distance: %.3f \r\n", Thick_Center,Past_Distance);
-		uartPrintf(_DEF_UART1, "cnt:%d,%d distance: %.3fM  pos:%d, %d\r\n", TIM2_CNT,TIM4_CNT,Distance,Pos_L, Pos_R);
+	//	uartPrintf(_DEF_UART1, "cnt:%d,%d distance: %.3fM  pos:%d, %d\r\n", TIM2_CNT,TIM4_CNT,Distance,Pos_L, Pos_R);
 
 /*
 

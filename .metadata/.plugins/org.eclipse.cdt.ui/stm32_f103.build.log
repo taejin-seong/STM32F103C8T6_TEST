@@ -1,10 +1,19 @@
-00:08:33 **** Incremental Build of configuration Debug for project stm32_f103 ****
+23:39:08 **** Build of configuration Debug for project stm32_f103 ****
 make -j4 all 
+arm-none-eabi-objdump -h -S  stm32_f103.elf  > "stm32_f103.list"
+arm-none-eabi-objcopy  -O ihex  stm32_f103.elf  "stm32_f103.hex"
+arm-none-eabi-objcopy  -O binary  stm32_f103.elf  "stm32_f103.bin"
 arm-none-eabi-size   stm32_f103.elf 
    text	   data	    bss	    dec	    hex	filename
-  36856	    524	   2420	  39800	   9b78	stm32_f103.elf
+  37312	    524	   2420	  40256	   9d40	stm32_f103.elf
 Finished building: default.size.stdout
+Finished building: stm32_f103.hex
+ 
+Finished building: stm32_f103.bin
+ 
+ 
+Finished building: stm32_f103.list
  
 
-00:08:35 Build Finished. 0 errors, 0 warnings. (took 1s.776ms)
+23:39:12 Build Finished. 0 errors, 0 warnings. (took 3s.957ms)
 
