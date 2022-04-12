@@ -1,0 +1,23 @@
+18:02:17 **** Incremental Build of configuration Debug for project stm32f103_remind ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -DUSER_VECT_TAB_ADDRESS -c -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/ap" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/bsp" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/common" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/hw" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/cube_remind_f103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/cube_remind_f103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/cube_remind_f103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/common/hw/include" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/cube_remind_f103/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/cube_remind_f103/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/cube_remind_f103/USB_DEVICE/App" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/cube_remind_f103/USB_DEVICE/Target" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/common/core" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/FreeRTOS/Source/CMSIS_RTOS" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/FreeRTOS/Source/include" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind/src/lib/FreeRTOS/Source/portable/GCC/ARM_CM3" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32f103_remind.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\remind_fw103\remind_arm\stm32f103_remind\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103_remind.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f103_remind.elf
+ 
+arm-none-eabi-objdump -h -S  stm32f103_remind.elf  > "stm32f103_remind.list"
+arm-none-eabi-objcopy  -O ihex  stm32f103_remind.elf  "stm32f103_remind.hex"
+arm-none-eabi-objcopy  -O binary  stm32f103_remind.elf  "stm32f103_remind.bin"
+arm-none-eabi-size   stm32f103_remind.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41844	    880	  15560	  58284	   e3ac	stm32f103_remind.elf
+Finished building: default.size.stdout
+Finished building: stm32f103_remind.hex
+Finished building: stm32f103_remind.bin
+ 
+ 
+ 
+Finished building: stm32f103_remind.list
+ 
+
+18:02:34 Build Finished. 0 errors, 0 warnings. (took 16s.254ms)
+

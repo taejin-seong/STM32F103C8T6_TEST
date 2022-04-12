@@ -1,0 +1,2 @@
+reset.c:15:6:resetInit	16	static
+reset.c:33:10:resetGetCount	4	static

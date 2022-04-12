@@ -1,0 +1,54 @@
+/*
+ * ap.c
+ *
+ *  Created on: Feb 18, 2022
+ *      Author: sungt
+ */
+
+#include "ap.h"
+
+uint32_t rx_in  = 0;
+uint32_t rx_out = 0;
+uint32_t rx_len = 512;
+uint32_t rx_buf[512];
+
+
+
+extern uint32_t cdcAvailable(void);
+extern uint8_t cdcRead(void);
+extern void cdcDataIn(uint8_t rx_data);
+extern uint32_t cdcWrite(uint8_t *p_data, uint32_t length);
+
+
+
+void apInit(void)
+{
+
+}
+
+
+void apMain(void)
+{
+  uint32_t pre_time;
+  pre_time = millis();
+
+  while(1)
+  {
+    if (millis() - pre_time >= 500)
+    {
+      pre_time = millis();
+      ledToggle(_DEF_LED1);
+    }
+
+    if (cdcAvailable() > 0) //데이터가 들어옴
+    {
+      uint8_t rx_data;
+      rx_data = cdcRead();
+      cdcWrite((uint8_t *)"rxData : ", 10);
+      cdcWrite(&rx_data, 1);
+      cdcWrite((uint8_t *)"\n", 2);
+    }
+  }
+}
+
+

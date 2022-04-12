@@ -1,0 +1,11 @@
+usbd_cdc_if.c:46:10:cdcAvailable	16	static
+usbd_cdc_if.c:56:9:cdcRead	16	static
+usbd_cdc_if.c:70:6:cdcDataIn	24	static
+usbd_cdc_if.c:85:10:cdcWrite	24	static
+usbd_cdc_if.c:117:10:cdcGetBaud	4	static
+usbd_cdc_if.c:123:9:USB_CDC_SOF	32	static
+usbd_cdc_if.c:268:15:CDC_Init_FS	8	static
+usbd_cdc_if.c:282:15:CDC_DeInit_FS	4	static
+usbd_cdc_if.c:296:15:CDC_Control_FS	16	static
+usbd_cdc_if.c:389:15:CDC_Receive_FS	32	static
+usbd_cdc_if.c:431:9:CDC_Transmit_FS	24	static

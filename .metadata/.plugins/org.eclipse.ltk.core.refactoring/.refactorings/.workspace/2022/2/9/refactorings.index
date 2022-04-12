@@ -1,0 +1,6 @@
+1645451586256	Delete resource 'stm32f103_remind2_boot/Debug'
+1645451618104	Delete resource 'stm32f103_remind2_boot/stm32f103_remind Debug.launch'
+1645454548146	Delete 2 resources
+1645454568990	Delete 2 resources
+1645454905727	Delete resource 'stm32f103_remind2_boot/src/common/hw/include/uart.h'
+1645455271173	Delete resource 'stm32f103_remind2_boot/src/hw/driver/uart.c'

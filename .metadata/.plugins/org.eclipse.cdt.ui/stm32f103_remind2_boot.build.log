@@ -1,0 +1,23 @@
+01:05:42 **** Incremental Build of configuration Debug for project stm32f103_remind2_boot ****
+make -j4 all 
+arm-none-eabi-gcc "../src/hw/driver/reset.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xB -c -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/ap" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/bsp" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/common" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/hw" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/lib" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/lib/cube_remind_f103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/lib/cube_remind_f103/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/lib/cube_remind_f103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/common/hw/include" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/lib/cube_remind_f103/Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/lib/cube_remind_f103/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/lib/cube_remind_f103/USB_DEVICE/App" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/lib/cube_remind_f103/USB_DEVICE/Target" -I"C:/STM32 Coding files/remind_fw103/remind_arm/stm32f103_remind2_boot/src/common/core" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/hw/driver/reset.d" -MT"src/hw/driver/reset.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/hw/driver/reset.o"
+arm-none-eabi-gcc -o "stm32f103_remind2_boot.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\remind_fw103\remind_arm\stm32f103_remind2_boot\src\bsp\ldscript\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103_remind2_boot.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f103_remind2_boot.elf
+ 
+arm-none-eabi-objdump -h -S  stm32f103_remind2_boot.elf  > "stm32f103_remind2_boot.list"
+arm-none-eabi-objcopy  -O ihex  stm32f103_remind2_boot.elf  "stm32f103_remind2_boot.hex"
+arm-none-eabi-objcopy  -O binary  stm32f103_remind2_boot.elf  "stm32f103_remind2_boot.bin"
+arm-none-eabi-size   stm32f103_remind2_boot.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16096	    236	   5416	  21748	   54f4	stm32f103_remind2_boot.elf
+Finished building: default.size.stdout
+Finished building: stm32f103_remind2_boot.bin
+Finished building: stm32f103_remind2_boot.hex
+ 
+ 
+ 
+Finished building: stm32f103_remind2_boot.list
+ 
+
+01:06:00 Build Finished. 0 errors, 0 warnings. (took 17s.756ms)
+

@@ -1,0 +1,47 @@
+/*
+ * uart.c
+ *
+ *  Created on: 2022. 2. 19.
+ *      Author: sungt
+ */
+
+
+#include "uart.h"
+
+
+
+static bool
+
+bool uartInit(void)
+{
+
+}
+
+
+bool uartOpen(uint8_t ch, uint32_t baud)
+{
+
+}
+
+
+uint32_t uartAvailable(uint8_t ch)
+{
+
+}
+
+
+uint8_t  uartRead(uint8_t ch)
+{
+
+}
+
+
+uint32_t uarWrite(uint8_t ch, uint8_t *p_data, uint32_t length)
+{
+}
+
+
+uint32_t uartPrintf(uint8_t ch, char *fmt, ...)
+{
+
+}

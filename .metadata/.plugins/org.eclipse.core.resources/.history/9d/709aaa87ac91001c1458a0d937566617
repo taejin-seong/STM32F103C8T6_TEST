@@ -1,0 +1,26 @@
+/*
+ * reset.c
+ *
+ *  Created on: 2022. 2. 20.
+ *      Author: sungt
+ */
+
+
+#include "reset.h"
+
+
+
+
+
+bool resetInit(void)
+{
+  bool ret = true;
+
+  return ret;
+}
+
+
+uint32_t resetGetCount(void)
+{
+  return 0;
+}

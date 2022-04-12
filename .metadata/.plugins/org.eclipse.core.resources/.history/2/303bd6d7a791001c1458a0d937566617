@@ -1,0 +1,19 @@
+/*
+ * rtc.c
+ *
+ *  Created on: 2022. 2. 20.
+ *      Author: sungt
+ */
+
+
+#include "rtc.h"
+
+
+
+
+bool rtcInit(void)
+{
+  bool ret = ture;
+
+  return ret;
+}

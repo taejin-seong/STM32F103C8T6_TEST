@@ -1,0 +1,13 @@
+/*
+ * qbuffer.h
+ *
+ *  Created on: 2022. 2. 20.
+ *      Author: sungt
+ */
+
+#ifndef SRC_COMMON_HW_INCLUDE_QBUFFER_H_
+#define SRC_COMMON_HW_INCLUDE_QBUFFER_H_
+
+
+
+#endif /* SRC_COMMON_HW_INCLUDE_QBUFFER_H_ */
